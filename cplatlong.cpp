@@ -2,7 +2,7 @@
 
 CPLatLong::CPLatLong()
 {
-    m_lat =0;
+    m_lat =10;
     m_long =0;
 }
 
