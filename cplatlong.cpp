@@ -25,3 +25,4 @@ double CPLatLong::f_getLong()
 {
     return m_long;
 }
+// phan thay doi
