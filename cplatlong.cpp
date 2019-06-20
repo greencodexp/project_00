@@ -3,7 +3,7 @@
 CPLatLong::CPLatLong()
 {
     m_lat =10;
-    m_long =0;
+    m_long =100;
 }
 
 void CPLatLong::f_setLat(double a)
