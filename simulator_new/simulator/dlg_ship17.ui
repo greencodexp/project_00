@@ -1,0 +1,1752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dlg_Ship17</class>
+ <widget class="QDialog" name="Dlg_Ship17">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>905</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>881</width>
+     <height>881</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>T40</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>B6000</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>811</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000;</string>
+     </property>
+     <property name="title">
+      <string>Cntrl Msg</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>31</y>
+        <width>153</width>
+        <height>109</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>EMU</string>
+      </property>
+      <widget class="QRadioButton" name="ctl_chkEMUActive_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>41</y>
+         <width>98</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Activate       </string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="ctl_chkEMUDeactive_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>63</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Deactivate</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>31</y>
+        <width>153</width>
+        <height>109</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Ring</string>
+      </property>
+      <widget class="QRadioButton" name="ctl_chkRingPressed_2">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>42</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Pressed</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="ctl_chkRingNotPressed_2">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>65</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Not Pressed</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>31</y>
+        <width>153</width>
+        <height>109</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Msg Validity</string>
+      </property>
+      <widget class="QRadioButton" name="ctl_chkMsgValidity_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>42</y>
+         <width>105</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Valid              </string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="ctl_chkMsgInvalid_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>65</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Invalid</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>488</x>
+        <y>31</y>
+        <width>153</width>
+        <height>109</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Range</string>
+      </property>
+      <widget class="QRadioButton" name="ctl_chkRangeLow1500_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>42</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>&lt;= 1500 m</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="ctl_chkRangeHeight1500_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>65</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>&gt; 1500 m      </string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>647</x>
+        <y>31</y>
+        <width>153</width>
+        <height>109</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Signal</string>
+      </property>
+      <widget class="QRadioButton" name="ctl_chkSignalFire_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>42</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>OK to Fire</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="ctl_chkSignalSstopFire_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>65</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Stop firing     </string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>171</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>α (deg):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ctl_lneAngleAlpha_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>174</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>170</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string> yГН (deg):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ctl_lneAngleGamma_2">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>174</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>171</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Ѱ (deg):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ctl_lneAnglePsi_2">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>174</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>170</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Ѳ (deg):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ctl_lneAngleTeta_2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>174</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>0.00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>231</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Rocket Selection:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ctl_cmbRocketSelection_2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>234</y>
+        <width>136</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Rocket Selected</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12th Rocket Fire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6th Rocket Fire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11th Rocket Fire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Salvo of 4 Rockets</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Salvo of 8 Rockets</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Salvo of 12 Rockets</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_49">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>233</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Training with Drive</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_50">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>260</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Training Mode</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ctl_cmbTrainDrive_2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>233</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Training with Drive</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="ctl_cmbTrainMode_2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>260</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Mission Mode</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>480</y>
+       <width>811</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000;</string>
+     </property>
+     <property name="title">
+      <string>Status Msg</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_9">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>50</y>
+        <width>371</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Rocket Presence</string>
+      </property>
+      <widget class="QCheckBox" name="ctl_chkRocket1_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>32</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 1</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket3_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>54</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 3</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket5_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>76</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 5</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket7_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>98</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 7</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket9_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>120</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 9</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket11_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>142</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 11</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket2_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>32</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 2</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket4_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>54</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 4</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket6_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>76</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 6</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket8_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>98</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 8</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket10_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>120</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 10</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="ctl_chkRocket12_2">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>142</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: solid #000;</string>
+       </property>
+       <property name="text">
+        <string>Rocket 12</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>31</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Error Code:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>31</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>72</y>
+        <width>148</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Launcher Status:            </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>110</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Insulation check Status: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>150</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Rocket Selection:            </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_52">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>190</y>
+        <width>150</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>AZ Firing Angle:              </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_53">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>230</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Launch Drive health Sts:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctl_labLauncherStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>72</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctl_labInsulationStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>110</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctl_labRocketSelection_2">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>150</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctl_labFireAngle_2">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>190</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctl_labLaunchDriveHealth_2">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>230</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>760</y>
+       <width>811</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000;</string>
+     </property>
+     <property name="title">
+      <string>Status Indicator 1</string>
+     </property>
+     <widget class="QCheckBox" name="checkBox_5">
+      <property name="geometry">
+       <rect>
+        <x>23</x>
+        <y>43</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Targeted</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>43</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Danger Zone</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_7">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>43</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Depth Set</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_8">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>43</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: solid #000;</string>
+      </property>
+      <property name="text">
+       <string>Permission To Fire</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="ctl_cmbLauncherDriveCheck_2">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>84</y>
+       <width>254</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Perform Elevation Drive Health Check</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>24</y>
+       <width>82</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Test Tubes</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>24</y>
+       <width>161</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Launcher Firing Ckt</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_40">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>58</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Launcher Drive Check</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ctl_btnSend_2">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>84</y>
+       <width>80</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>24</y>
+       <width>401</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QPushButton" name="ctl_btnB60001_2">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>B6000-I</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="ctl_labelStatusB6000_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: red;</string>
+          </property>
+          <property name="text">
+           <string>LINK DOWN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QPushButton" name="ctl_btnB60002_2">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>B6000-II</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="ctl_labelStatusB6000_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: red;</string>
+          </property>
+          <property name="text">
+           <string>LINK DOWN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>28M</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_41">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_42">
+       <property name="leftMargin">
+        <number>100</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_71">
+         <property name="spacing">
+          <number>100</number>
+         </property>
+         <property name="leftMargin">
+          <number>150</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>200</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton_10">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M28-I</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_11">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M28-II</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_72">
+         <property name="spacing">
+          <number>100</number>
+         </property>
+         <property name="leftMargin">
+          <number>150</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>200</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_43">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_57">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: red;</string>
+             </property>
+             <property name="text">
+              <string>LINK DOWN</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_44">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_58">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: red;</string>
+             </property>
+             <property name="text">
+              <string>LINK DOWN</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_73">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton_12">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Self Test</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_25">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_74">
+         <property name="leftMargin">
+          <number>150</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>200</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="M28_Cntrl_Msg_2">
+           <property name="styleSheet">
+            <string notr="true">#M28_Cntrl_Msg { 
+border: 2px solid black; 
+border-radius: 5px; 
+background-color: white; 
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_10">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_75">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_59">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Cntrl Msg</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_26">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_76">
+              <property name="spacing">
+               <number>100</number>
+              </property>
+              <property name="leftMargin">
+               <number>100</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="M28_Msg_Validity_2">
+                <property name="styleSheet">
+                 <string notr="true">#M28_Msg_Validity { 
+border: 1px solid black; 
+border-radius: 5px; 
+background-color: white; 
+}</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_45">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_60">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Msg Validity</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_13">
+                   <property name="text">
+                    <string>Valid                    </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_14">
+                   <property name="text">
+                    <string>Invalid</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_77">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_61">
+                  <property name="text">
+                   <string>Depth Setting of Rocket (meters): </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_6">
+                  <property name="text">
+                   <string>90.00</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_78">
+         <property name="leftMargin">
+          <number>150</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>200</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="M28_Status_Msg_2">
+           <property name="styleSheet">
+            <string notr="true">#M28_Status_Msg { 
+border: 2px solid black; 
+border-radius: 5px; 
+background-color: white; 
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_46">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_79">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_62">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Status Msg</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_27">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_80">
+              <property name="leftMargin">
+               <number>100</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_63">
+                <property name="text">
+                 <string>Depth Set Indicator:     </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_64">
+                <property name="text">
+                 <string>-                               </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_28">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

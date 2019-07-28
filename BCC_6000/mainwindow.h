@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QtCore>
 #include <QDebug>
+#include <QTimer>
 namespace Ui {
 class MainWindow;
 }
@@ -23,6 +24,7 @@ public:
     void f_readConfigFile(QString pathFile);
     void f_setUpLayout();
     void f_startListen();
+    void f_sendMSG(unsigned int receivedMSGCouter);
 private:
     Ui::MainWindow *ui;
     // port
@@ -42,6 +44,7 @@ private:
     QUdpSocket *m_socketRFC;
     // table
     int tableRowCount;
+    //Timer m_sendTimer;
 signals:
 
 public slots:

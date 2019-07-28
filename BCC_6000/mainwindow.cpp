@@ -26,11 +26,11 @@ void MainWindow::f_Init()
     // port
     m_portSendFCS = 6230;
     m_portReceiveFCS = 6231;
-    m_portSendLocal = 6230;
-    m_portReceiveLocal = 6231;
+    m_portSendLocal = 6231;
+    m_portReceiveLocal = 6230;
     // ip
-    m_ipLocal = new QHostAddress("127.0.0.1");
-    m_ipFCC = new QHostAddress("192.168.1.100");
+    m_ipLocal = new QHostAddress("192.168.1.105");
+    m_ipFCC = new QHostAddress("192.168.1.99");
     m_ipRFC = new QHostAddress("192.168.1.99");
     // udpclient
 
@@ -40,13 +40,15 @@ void MainWindow::f_Init()
     m_socketRecieveLocal = new QUdpSocket(this);
     m_socketRecieveLocal->bind(*m_ipLocal,m_portReceiveLocal);
 
-    m_socketFCC = new QUdpSocket(this);
-    m_socketFCC->bind(*m_ipFCC,m_portSendFCS);
+//    m_socketFCC = new QUdpSocket(this);
+//    m_socketFCC->bind(*m_ipFCC,m_portSendFCS);
 
-    m_socketRFC = new QUdpSocket(this);
-    m_socketRFC->bind(*m_ipFCC,m_portSendFCS);
+//    m_socketRFC = new QUdpSocket(this);
+//    m_socketRFC->bind(*m_ipFCC,m_portSendFCS);
     // connection
     connect(m_socketRecieveLocal,SIGNAL(readyRead()), this, SLOT(s_receiveMSG()));
+    connect(ui->ctl_btnSendMSG,SIGNAL(clicked()),this,SLOT(s_sendMSG()));
+    //connect(ui->ctl_btnSendMSG_2,SIGNAL(clicked(bool)),this,SLOT(s_sendMSG()));
 //    connect(m_socketSendLocal,SIGNAL(se))
 }
 
@@ -75,7 +77,7 @@ void MainWindow::f_setUpLayout()
 
 
     // socket config
-    ui->ctl_IP_BCC->setText("127.0.0.1");
+    ui->ctl_IP_BCC->setText("192.168.1.101");
     ui->ctl_IP_FCC->setText("127.0.0.1");
     ui->ctl_IP_RFC->setText("127.0.0.1");
 
@@ -125,7 +127,63 @@ void MainWindow::f_startListen()
 //            datagram.resize(socket->pendingDatagramSize());
 //            socket->readDatagram(datagram.data(), datagram.size());
 //            qDebug() << "Message receive: " << datagram.data();
-//        }
+    //        }
+}
+
+void MainWindow::f_sendMSG(unsigned int receivedMSGCouter)
+{
+    unsigned short int m_header = 0x5A5A;
+    unsigned short int m_senderID = 0x0105;
+    unsigned short int m_receivedID = 0x0001;
+    unsigned short int m_statusDataID = 0x0001;
+    unsigned short int m_commandID = 0x0001;
+    unsigned int m_receivedMSGCounter = receivedMSGCouter;
+    unsigned short int m_RLMode = 0x0001;
+    unsigned short int m_fireModeRocketSelection = 0x41;
+    unsigned short int m_azimuthFiringAngle = 0x01;
+    unsigned char m_statusIndicator1 =0x01;
+    unsigned short m_statusIndicator2 = 0x02;
+    unsigned char m_testResultForSelfTest = 0x01;
+    unsigned short m_errorCode = 18;
+    unsigned short int m_reserved1 =0x0000 ;
+    unsigned short int m_reserved2=0x0000;
+    unsigned short int m_reserved3=0x0000;
+    unsigned short int m_reserved4=0x0000;
+    unsigned int m_messageCounter =0x0001;
+    unsigned short int m_footer = 0xA5A5;
+//    QMessageBox mesage;
+//    mesage.setText("Send status msg");
+//    mesage.exec();
+    QByteArray msg;
+    //QByteArray datagram_out;
+    QDataStream out(&msg, QIODevice::WriteOnly);
+    out <<m_header<< m_senderID << m_receivedID << m_statusDataID<<m_commandID<<m_receivedMSGCounter<<m_RLMode
+          <<m_fireModeRocketSelection<<m_azimuthFiringAngle<<m_statusIndicator1<<m_statusIndicator2
+            <<m_testResultForSelfTest<<m_errorCode<<m_reserved1<<m_reserved2<<m_reserved3
+              <<m_reserved4<<m_messageCounter<<m_footer;
+
+    int send = m_socketSendLocal->writeDatagram(msg,*m_ipFCC,m_portReceiveFCS);
+    if(send==-1)
+    {
+        qDebug() << "Send msg error";
+    }
+    else
+    {
+        // convert QByteArray
+        QString str_data;
+        str_data="";
+        for(int i=0;i<msg.count();i++)
+           {
+               QByteArray byte_i = msg.mid(i,1);
+               QString strbyte_i = byte_i.toHex() +" ";
+               str_data.append(strbyte_i);
+           };
+        // lenght
+        QString str_lenght = QString::number(msg.size());
+        // log to console
+        qDebug() << "Send msg: "<< str_data;
+        //qDebug() << "Send msg: "<<QString::number(send)<<" [bytes]";
+    }
 }
 
 void MainWindow::s_receiveMSG()
@@ -143,6 +201,7 @@ void MainWindow::s_receiveMSG()
      QByteArray datagram;
      datagram.resize(m_socketRecieveLocal->pendingDatagramSize());
      m_socketRecieveLocal->readDatagram(datagram.data(), datagram.size());
+
      // convert QByteArray
      QString str_data;
      str_data="";
@@ -157,7 +216,6 @@ void MainWindow::s_receiveMSG()
      // add new row to table
      // <<"#"<<"Time"<<"SRC"<<"DESTN"<<"DATA"<<"Lenght;
 
-
      ui->ctl_tableFCC->setRowCount(tableRowCount+1);
      ui->ctl_tableFCC->setItem(tableRowCount,0, new QTableWidgetItem(tt));
      ui->ctl_tableFCC->setItem(tableRowCount,1, new QTableWidgetItem(str_time));
@@ -168,14 +226,64 @@ void MainWindow::s_receiveMSG()
      tableRowCount++;
      // log to console
      qDebug() << "Receive msg: "<< str_data;
+     // send data to NIHAN
+     // tinh message couter c?a goi tin v?a nh?n du?c
+     QByteArray arrayCouter;
+     arrayCouter.resize(4);
+     arrayCouter[0] = datagram[28];
+     arrayCouter[1] = datagram[29];
+     arrayCouter[2] = datagram[30];
+     arrayCouter[3] = datagram[31];
+     QDataStream streamIN(&arrayCouter, QIODevice::ReadOnly);
+     unsigned int couter;
+     streamIN >> couter;
+     f_sendMSG(couter);
 }
 
 void MainWindow::s_sendMSG()
 {
+    unsigned short int m_header = 0x5A5A;
+    unsigned short int m_senderID = 0x0105;
+    unsigned short int m_receivedID = 0x0001;
+    unsigned short int m_statusDataID = 0x0001;
+    unsigned short int m_commandID = 0x0001;
+    unsigned int m_receivedMSGCounter = 0x0000;
+    unsigned short int m_RLMode = 0x0001;
+    unsigned short int m_fireModeRocketSelection = 0x41;
+    unsigned short int m_azimuthFiringAngle = 45;
+    unsigned short m_statusIndicator1 =0x01;
+    unsigned short m_statusIndicator2 = 0x02;
+    unsigned char m_testResultForSelfTest = 0x01;
+    unsigned short m_errorCode = 18;
+    unsigned short int m_reserved1 =0x0000 ;
+    unsigned short int m_reserved2=0x0000;
+    unsigned short int m_reserved3=0x0000;
+    unsigned short int m_reserved4=0x0000;
+    unsigned int m_messageCounter =0x0001;
+    unsigned short int m_footer = 0xA5A5;
+//    QMessageBox mesage;
+//    mesage.setText("Send status msg");
+//    mesage.exec();
+    QByteArray msg;
+    //QByteArray datagram_out;
+    QDataStream out(&msg, QIODevice::WriteOnly);
+    out <<m_header<< m_senderID << m_receivedID << m_statusDataID<<m_commandID<<m_receivedMSGCounter<<m_RLMode
+          <<m_fireModeRocketSelection<<m_azimuthFiringAngle<<m_statusIndicator1<<m_statusIndicator2
+            <<m_testResultForSelfTest<<m_errorCode<<m_reserved1<<m_reserved2<<m_reserved3
+              <<m_reserved4<<m_messageCounter<<m_footer;
+
+    int send = m_socketSendLocal->writeDatagram(msg,*m_ipFCC,m_portReceiveFCS);
+    if(send==-1)
+    {
+        qDebug() << "Send msg error";
+    }
+    else
+    {
+        qDebug() << "Send msg: "<<QString::number(send)<<" [bytes]";
+    }
 
 }
 
 void MainWindow::f_readConfigFile(QString pathFile)
 {
-
 }

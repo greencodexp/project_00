@@ -1,7 +1,5 @@
 #ifndef CGLOBAL_H
 #define CGLOBAL_H
-
-#include <QObject>
 struct MSG_BCC6000CTL
 {
     MSG_BCC6000CTL() {
@@ -65,15 +63,10 @@ struct MSG_BCC6000STA
 
     }
 };
-class CGlobal : public QObject
+class CGlobal
 {
-    Q_OBJECT
 public:
-    explicit CGlobal(QObject *parent = 0);
-
-signals:
-
-public slots:
+    CGlobal();
 };
 
 #endif // CGLOBAL_H

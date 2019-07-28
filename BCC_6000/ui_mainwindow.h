@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat Jul 6 22:29:25 2019
+** Created: Sun Jul 21 21:42:46 2019
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -98,7 +98,7 @@ public:
         ctl_cbSendMSGTypeFCC->setGeometry(QRect(120, 330, 241, 23));
         ctl_btnSendMSG = new QPushButton(groupBox);
         ctl_btnSendMSG->setObjectName(QString::fromUtf8("ctl_btnSendMSG"));
-        ctl_btnSendMSG->setGeometry(QRect(20, 330, 80, 23));
+        ctl_btnSendMSG->setGeometry(QRect(20, 330, 75, 23));
 
         horizontalLayout->addWidget(groupBox);
 
@@ -183,7 +183,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

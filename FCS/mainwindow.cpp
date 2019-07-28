@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     f_Init();
     f_SetupLayout();
-    f_getSocketConfBCC();
+    //f_getSocketConfBCC();
     //m_timer->start(1000);
 }
 
@@ -19,9 +19,9 @@ MainWindow::~MainWindow()
 void MainWindow::f_Init()
 {
     m_portFCS = 6230;
-    //m_portBCC = 6231;
-    m_ipFCS = new QHostAddress("127.0.0.1");
-    m_ipBCC = new QHostAddress("127.0.0.1");
+    m_portBCC = 6231;
+    m_ipFCS = new QHostAddress("192.168.2.10");
+    m_ipBCC = new QHostAddress("192.168.2.11");
 
     m_socketFCS = new QUdpSocket(this);
     m_socketFCS->bind(*m_ipFCS,m_portFCS);
@@ -35,6 +35,7 @@ void MainWindow::f_Init()
     connect(ui->ctl_btnSend,SIGNAL(clicked(bool)),this,SLOT(f_send()));    
     connect(ui->ctl_btnAutoTest,SIGNAL(clicked(bool)),m_timer,SLOT(start()));
     connect(m_timer,SIGNAL(timeout()),this,SLOT(f_send()));
+    //connect ()
 }
 void MainWindow::f_SetupLayout()
 {
@@ -89,6 +90,9 @@ void MainWindow::f_send()
     msg[2] = 0x03;
     msg[3] = 0x04;
     msg[4] = 0x05;
+    for(int i=0;i<1000;i++)
+    {
+
     int send = m_socketFCS->writeDatagram(msg,*m_ipBCC,m_portBCC);
     if(send==-1)
     {
@@ -97,5 +101,6 @@ void MainWindow::f_send()
     else
     {
         qDebug() << "Send msg: "<<QString::number(send)<<" [bytes]";
+    }
     }
 }
