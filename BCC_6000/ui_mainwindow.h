@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sun Jul 21 21:42:46 2019
+** Created: Tue Aug 6 11:24:41 2019
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,7 +14,6 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -22,11 +21,11 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenuBar>
-#include <QtGui/QPushButton>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableWidget>
 #include <QtGui/QToolBar>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,18 +34,16 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QGroupBox *groupBox;
-    QTableWidget *ctl_tableFCC;
-    QComboBox *ctl_cbSendMSGTypeFCC;
-    QPushButton *ctl_btnSendMSG;
+    QHBoxLayout *horizontalLayout_2;
+    QTableWidget *ctl_tableRciv;
     QGroupBox *groupBox_2;
-    QTableWidget *ctl_tableRFC;
-    QComboBox *ctl_cbSendMSGTypeRFC;
-    QPushButton *ctl_btnSendMSG_2;
+    QHBoxLayout *horizontalLayout_3;
+    QTableWidget *ctl_tableSend;
     QWidget *tab_2;
     QGroupBox *groupBox_3;
     QLabel *label;
@@ -71,49 +68,48 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1165, 558);
+        MainWindow->resize(1228, 567);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 10, 1131, 451));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
-        layoutWidget = new QWidget(tab);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 20, 1101, 371));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
+        horizontalLayout = new QHBoxLayout(tab);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox = new QGroupBox(layoutWidget);
+        groupBox = new QGroupBox(tab);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setStyleSheet(QString::fromUtf8("background-color: rgb(215, 222, 223);"));
-        ctl_tableFCC = new QTableWidget(groupBox);
-        ctl_tableFCC->setObjectName(QString::fromUtf8("ctl_tableFCC"));
-        ctl_tableFCC->setGeometry(QRect(20, 40, 511, 281));
-        ctl_cbSendMSGTypeFCC = new QComboBox(groupBox);
-        ctl_cbSendMSGTypeFCC->setObjectName(QString::fromUtf8("ctl_cbSendMSGTypeFCC"));
-        ctl_cbSendMSGTypeFCC->setGeometry(QRect(120, 330, 241, 23));
-        ctl_btnSendMSG = new QPushButton(groupBox);
-        ctl_btnSendMSG->setObjectName(QString::fromUtf8("ctl_btnSendMSG"));
-        ctl_btnSendMSG->setGeometry(QRect(20, 330, 75, 23));
+        horizontalLayout_2 = new QHBoxLayout(groupBox);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        ctl_tableRciv = new QTableWidget(groupBox);
+        ctl_tableRciv->setObjectName(QString::fromUtf8("ctl_tableRciv"));
+
+        horizontalLayout_2->addWidget(ctl_tableRciv);
+
 
         horizontalLayout->addWidget(groupBox);
 
-        groupBox_2 = new QGroupBox(layoutWidget);
+        groupBox_2 = new QGroupBox(tab);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(215, 222, 223);"));
-        ctl_tableRFC = new QTableWidget(groupBox_2);
-        ctl_tableRFC->setObjectName(QString::fromUtf8("ctl_tableRFC"));
-        ctl_tableRFC->setGeometry(QRect(10, 40, 511, 281));
-        ctl_cbSendMSGTypeRFC = new QComboBox(groupBox_2);
-        ctl_cbSendMSGTypeRFC->setObjectName(QString::fromUtf8("ctl_cbSendMSGTypeRFC"));
-        ctl_cbSendMSGTypeRFC->setGeometry(QRect(110, 330, 241, 23));
-        ctl_btnSendMSG_2 = new QPushButton(groupBox_2);
-        ctl_btnSendMSG_2->setObjectName(QString::fromUtf8("ctl_btnSendMSG_2"));
-        ctl_btnSendMSG_2->setGeometry(QRect(10, 330, 80, 23));
+        horizontalLayout_3 = new QHBoxLayout(groupBox_2);
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        ctl_tableSend = new QTableWidget(groupBox_2);
+        ctl_tableSend->setObjectName(QString::fromUtf8("ctl_tableSend"));
+
+        horizontalLayout_3->addWidget(ctl_tableSend);
+
 
         horizontalLayout->addWidget(groupBox_2);
 
@@ -169,10 +165,13 @@ public:
         ctl_portRFC->setObjectName(QString::fromUtf8("ctl_portRFC"));
         ctl_portRFC->setGeometry(QRect(100, 70, 81, 23));
         tabWidget->addTab(tab_2, QString());
+
+        verticalLayout->addWidget(tabWidget);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1165, 20));
+        menuBar->setGeometry(QRect(0, 0, 1228, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -192,10 +191,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "BCC_B6000", 0, QApplication::UnicodeUTF8));
-        groupBox->setTitle(QApplication::translate("MainWindow", "FCC", 0, QApplication::UnicodeUTF8));
-        ctl_btnSendMSG->setText(QApplication::translate("MainWindow", "Send", 0, QApplication::UnicodeUTF8));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "RFC", 0, QApplication::UnicodeUTF8));
-        ctl_btnSendMSG_2->setText(QApplication::translate("MainWindow", "Send", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Recived", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "Send", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Transmission", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "BCC_B6000", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "IP", 0, QApplication::UnicodeUTF8));
